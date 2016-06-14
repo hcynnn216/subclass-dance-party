@@ -4,7 +4,7 @@ body, html{
 body{
   margin: 0px;
   background-image: url("http://alter-egoevents.com/wp-content/uploads/2013/09/alter-egoentertainment201393.jpg");
-  background-size: 1070px 910px;
+  background-size: 1920px 1040px;
 background-repeat: no-repeat;
   font-size: 18px;
 }
@@ -24,13 +24,17 @@ body, a:link, a:visited, a:active{
 }
 
 .dancing{
-  border:10px solid yellow;
-  border-radius:100px;
+
   position:absolute;
+
   
 
 }
+img{
+width:75px;
+height:150px;
 
+}
 .lineUp{
   padding:5px 12px;
   float:right;

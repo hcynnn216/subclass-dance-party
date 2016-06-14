@@ -1,4 +1,5 @@
 // MAKE THE BELOW PC!!!
+//trump
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 makeDancer.call(this,top, left, timeBetweenSteps)
 this.top=top;
@@ -28,7 +29,7 @@ makeBlinkyDancer.prototype=Object.create(makeDancer.prototype)
 makeBlinkyDancer.prototype.constructor=makeBlinkyDancer;
 
 
-
+//Clinton
 var makeOtherDancer = function(top, left, timeBetweenSteps) {
 makeDancer.call(this,top, left, timeBetweenSteps);
 
@@ -37,6 +38,27 @@ makeDancer.call(this,top, left, timeBetweenSteps);
 
   var oldStep = this.step;
   
+this.$node=$('<span class="dancing"> <img class="clinton" src="/Users/student/Downloads/CLINTON.png"></span>')
+
+this.setPosition = function(top, left) {
+    // Use css top and left properties to position our <span> tag
+    // where it belongs on the page. See http://api.jquery.com/css/
+    //
+    var styleSettings = {
+      top: top,
+      left: left
+    };
+    this.$node.css(styleSettings);
+  };
+  this.setPosition(top, left);
+
+
+
+
+
+
+
+
 
   this.step = function() {
 
@@ -57,11 +79,26 @@ makeDancer.call(this,top, left, timeBetweenSteps);
 
 var makeAnotherDancer = function(top, left, timeBetweenSteps) {
 makeDancer.call(this,top, left, timeBetweenSteps);
-
+this.$node=$('<span class="dancing"><img src="/Users/student/Downloads/sanders.png"></span>')
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
 
   var oldStep = this.step;
+
+
+  this.setPosition = function(top, left) {
+    // Use css top and left properties to position our <span> tag
+    // where it belongs on the page. See http://api.jquery.com/css/
+    //
+    var styleSettings = {
+      top: top,
+      left: left
+    };
+    this.$node.css(styleSettings);
+  };
+
+
+  this.setPosition(top, left);
   
 
   this.step = function() {

@@ -11,18 +11,9 @@ console.log('lineUp')
   })
 
 
-  $('.getBack').on('click', function(event) {
+ //905 1323
 
-    for (var i = 0; i < window.dancers.length; i++) {
-      var num=window.dancers[i][2]
-      
-      $(".dancing").animate({"left": num+ "px"}, "fast")
-      
-    }
-
-  });
-
-
+//($("body").height()/4) * Math.random())+ .53*$("body").height()
   $('.addDancerButton').on('click', function(event) {
     
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
@@ -32,7 +23,7 @@ console.log('lineUp')
 
     var dancer = new dancerMakerFunction(
 
-      ($("body").height()) * Math.random(),
+      (($("body").height()/3.3) * Math.random())+ 550,
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
@@ -46,9 +37,38 @@ console.log('lineUp')
     window.dancers.push([dancer, dancer.top, dancer.left]);
     console.log(window.dancers)
 
-    $(".dancing").mouseover(function() {
+    $("img").mouseover(function() {
 
-      $(this).css("border", "10px solid blue");
+    //  $(this).css({"border": "10px solid blue"});
+
+      $(this).css({"width": "125px","height":"225px"});
     });
+
+    $("img").mouseleave(function() {
+
+    //  $(this).css({"border": "10px solid blue"});
+
+      $(this).css({"width": "75px","height":"150px"});
+    });
+
+
+
+ $(".dancing").click(function() {
+console.log('testtt');
+
+      
+   $(this).animate({"left": (Math.random()*$("body").width())+ "px"}, "fast")
+      
+    });
+
+
+
+
+
+
+
+
+
+
   });
 });
