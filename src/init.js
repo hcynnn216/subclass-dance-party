@@ -15,9 +15,11 @@ console.log('lineUp')
 
     for (var i = 0; i < window.dancers.length; i++) {
       var num=window.dancers[i][2]
-      console.log(num+ "px");
+      
       $(".dancing").animate({"left": num+ "px"}, "fast")
+      
     }
+
   });
 
 
@@ -38,6 +40,9 @@ console.log('lineUp')
 
 
     $('body').append(dancer.$node);
+    //
+    
+   //
     window.dancers.push([dancer, dancer.top, dancer.left]);
     console.log(window.dancers)
 
