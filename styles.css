@@ -39,3 +39,7 @@ height:150px;
   padding:5px 12px;
   float:right;
 }
+.hideme{
+
+  display:none;
+}
