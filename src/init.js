@@ -40,28 +40,44 @@
     window.dancers.push([dancer, dancer.top, dancer.left]);
     console.log(window.dancers)
 
-    $("img").mouseover(function() {
+    $(".sandwich").mouseover(function() {
 
     //  $(this).css({"border": "10px solid blue"});
 
-      $(this).css({"width": "125px","height":"225px"});
+      $(this).css({"width": "200px","height":"400px"});
     });
 
     $("img").mouseleave(function() {
 
     //  $(this).css({"border": "10px solid blue"});
 
-      $(this).css({"width": "75px","height":"150px"});
+      $(this).css({"width": "130px","height":"200px"});
     });
 
 
 
 $(".dancing").unbind().click(function() {
-    
+console.log($(this).attr('class'))
 $(this).stop(true,true);
-$("h1").delay("slow").fadeIn();
-  $("h1").delay("slow").fadeOut();
-console.log('current place',$(this).attr('style'))
+
+
+if ($(this).attr('class').indexOf('l')>-1){
+$(" .Clintonss").delay("slow").fadeIn();
+  $(" .Clintonss").delay("slow").fadeOut(3000);
+}
+
+if ($(this).attr('class').indexOf('p')>-1){
+$(".Trumpss").delay("slow").fadeIn();
+  $(".Trumpss").delay("slow").fadeOut(3000);
+}
+
+if ($(this).attr('class').indexOf('sanders')>-1){
+$(".Berniess").delay("slow").fadeIn();
+  $(".Berniess").delay("slow").fadeOut(3000);
+}
+
+
+
     var array = $(this).attr('style').split(' ');
     var stringTop = array[1].slice(0, array[1].length - 3);
     var stringLeft = array[3].slice(0, array[3].length - 3);
@@ -74,7 +90,7 @@ console.log('current place',$(this).attr('style'))
     var left = person[2]
     var top = person[1]
 
-    console.log("place it will go",top, left);
+    
 
 
     $(this).animate({

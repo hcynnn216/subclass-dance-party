@@ -31,8 +31,8 @@ body, a:link, a:visited, a:active{
 
 }
 img{
-width:75px;
-height:150px;
+width:130px;
+height:200px;
 
 }
 .lineUp{
@@ -40,6 +40,5 @@ height:150px;
   float:right;
 }
 .hideme{
-
   display:none;
 }
