@@ -7,7 +7,52 @@
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
   </head>
-  <body src="http://i00.i.aliimg.com/img/pb/699/523/270/1286777141189_hz-fileserver3_7187043.jpg>">
+<body src="http://i00.i.aliimg.com/img/pb/699/523/270/1286777141189_hz-fileserver3_7187043.jpg>">
+
+<button class="play">Play</button>
+
+<button class="pause">Stop</button>
+<script>
+    $(document).ready(function() {
+        var audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', '/Users/student/Downloads/Track2.mp3');
+        audioElement.setAttribute('autoplay', 'autoplay');
+        //audioElement.load()
+
+        $.get();
+
+        audioElement.addEventListener("load", function() {
+            audioElement.play();
+        }, true);
+
+        $('.play').click(function() {
+            audioElement.play();
+        });
+
+        $('.pause').click(function() {
+            audioElement.pause();
+        });
+    });
+</script>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
  
     <div class="topbar">
       <span class="title">object dance party</span>

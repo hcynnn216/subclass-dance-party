@@ -93,12 +93,14 @@ $(".Berniess").delay("slow").fadeIn();
     
 
 
-    $(this).animate({
+    $(this).delay("slow").animate({
       "left": left + "px",
       "top": top + "px"
     }, "slow")
 
-    $(this).animate({
+
+
+    $(this).delay("slow").animate({
       "left": stringLeft + "px",
       "top": stringTop + "px"
     }, "slow")
